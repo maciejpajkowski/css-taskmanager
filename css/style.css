@@ -1,0 +1,589 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    color: #111;
+    overflow: hidden;
+}
+
+.app-container {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    padding: 10px 30px;
+    box-shadow: 0px 0px 5px 3px #ccc;
+    background: rgb(38, 42, 46);
+    color: #fff;
+    line-height: 1.5em;
+    /* z-index: 999; */
+}
+
+.nav__header {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    line-height: 1.5em;
+}
+
+.nav__menu {
+    display: flex;
+    flex-direction: row;
+}
+
+.nav__menu .far,
+.nav__menu .fas {
+    font-size: 1.2em;
+    margin-right: 10px;
+}
+
+.nav__option {
+    padding: 5px 15px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: all 0.3s;
+}
+
+.nav__option:hover {
+    background: rgb(0,0,0);
+}
+
+.nav__option:active {
+    background: rgb(255, 255, 255);
+    color: #000;
+}
+
+.nav__option--profile {
+    display: flex;
+    flex-direction: row;
+}
+
+.nav__avatar {
+    position: relative;
+    width: 25px;
+    height: 25px;
+    background: url('../img/avatar.png') center;
+    background-size: cover;
+    border-radius: 100%;
+    margin-right: 10px;
+}
+
+.nav__search {
+    background: transparent;
+    border: 1px solid #fff;
+    width: 100px;
+    padding: 10px;
+    margin-right: 10px;
+    border-radius: 10px;
+    transition: all 0.3s;
+    outline: none;
+    color: #fff;
+}
+
+.nav__search:focus {
+    width: 200px;
+}
+
+.nav__search::placeholder {
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+    font-style: italic;
+    opacity: 0.8;
+}
+
+.nav__search-button {
+    background: rgb(11, 179, 75);
+    border: 0;
+    border-radius: 10px;
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1em;
+    margin-right: 10px;
+    transition: all 0.3s;
+    outline: none;
+    padding: 5px 15px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.nav__search-button:hover {
+    background: rgb(26, 209, 19);
+}
+
+.nav__search-button:active {
+    background: rgb(68, 255, 62);
+}
+
+.app {
+    height: 100%;
+    width: 100%;
+    display: flex;
+}
+
+.menu {
+    z-index: 2;
+    height: 100%;
+    width: 350px;
+    background: rgb(54, 60, 65);
+    box-shadow: 0px 20px 15px 7px #ccc;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.menu__option-container {
+    font-size: 1.1em;
+}
+
+.menu__option-list-container {
+    margin: 0;
+    list-style: none;
+    padding: 0;
+}
+
+.menu__option {
+    padding: 13px 20px;
+    cursor: pointer;
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.5em;
+    transition: all 0.3s;
+    border-bottom: 1px solid rgb(38, 42, 46);
+}
+
+.menu__option:hover {
+    background: rgb(72, 80, 87);
+}
+
+.menu__option:active {
+    background: #252525;
+}
+
+.menu__option--header {
+    color: #aaa;
+    padding: 8px 0px;
+    text-align: center;
+    background: rgb(44, 49, 53);
+    transition: none;
+}
+
+.menu__option--header:hover {
+    background: rgb(44, 49, 53);
+    cursor: default;
+}
+
+.menu__option-hover {
+    transition: all 0.3s;
+}
+
+.menu__option:hover .menu__option-hover {
+    margin-left: 10px;
+}
+
+.menu__copyright {
+    position: absolute;
+    bottom: 0;
+    left: 1%;
+    display: flex;
+    color: #222;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.menu__option:hover .fa-home {
+    color: rgb(202, 32, 32);
+}
+
+.menu__option:hover .fa-chart-line {
+    color: rgb(32, 111, 202);
+}
+
+.menu__option:hover .fa-plus {
+    color: rgb(32, 202, 69);
+}
+
+.menu__option:hover .fa-edit {
+    color: rgb(155, 199, 53);
+}
+
+.menu__option:hover .fa-certificate {
+    color: rgb(235, 130, 45);
+}
+
+.menu__option:hover .fa-desktop {
+    color: rgb(241, 208, 16);
+}
+
+.menu__option:hover .fa-address-book {
+    color: rgb(80, 170, 255);
+}
+
+.menu__option:hover .fa-paint-brush {
+    color: rgb(181, 74, 243);
+}
+
+.menu__option:hover .fa-plug {
+    color: rgb(102, 172, 238);
+}
+
+.menu__option:hover .fa-chart-bar {
+    color: rgb(197, 53, 53);
+}
+
+.menu__option:hover .fa-wrench {
+    color: rgb(208, 255, 98);
+}
+
+.menu .fas {
+    display: inline-block;
+    text-align: center;
+    width: 30px;
+    color: #bbb;
+    margin-right: 15px;
+    transition: all 0.3s;
+}
+
+.content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+}
+
+.main-panel {
+    background: #f9f9f9;
+    width: 98%;
+    height: 98%;
+    box-shadow: 0 0 10px 3px #ddd;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+}
+
+.main-panel__row {
+    display: flex;
+    flex-grow: 1;
+    height: 50%;
+    margin: 10px;
+    padding: 5px;
+}
+
+.main-panel__row--first {
+    margin-bottom: 5px;
+}
+
+.main-panel__row--last {
+    margin-top: 5px;
+}
+
+.main-panel__panel {
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    padding: 20px;
+    border: 1px solid rgba(0,0,0,0.2);
+    border-radius: 5px;
+}
+
+.main-panel__panel--overview {
+    width: 35%;
+    margin-right: 10px;
+} 
+
+.main-panel__panel--progress {
+    width: 65%;
+    margin-left: 10px;
+}
+
+.main-panel__header {
+    flex: 0;
+    flex-basis: 5%;
+    color: rgb(62, 147, 216);
+    font-size: 1.7rem;
+    margin: 0;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgba(111,111,111,0.4);
+}
+
+.main-panel__header--subheader {
+    padding: 10px 0;
+    font-size: 1.2em;
+    border: 0;
+}
+
+.main-panel__totallvl,
+.main-panel__totalexp {
+    margin: 0;
+    padding: 10px 0;
+}
+
+.main-panel__panel--stats {
+    width: 70%;
+    margin-right: 10px;
+}
+
+.main-panel__stats-container {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.main-panel__panel--totd {
+    width: 30%;
+    margin-left: 10px;
+}
+
+.main-panel__curr-status {
+    line-height: 1.5em;
+    margin: 0;
+    padding: 15px 0;
+}
+
+.main-panel__curr-status--num {
+    color: rgb(62, 147, 216);
+    font-size: 1.4em;
+    padding: 0 3px;
+}
+
+.main-panel__summary {
+    font-size: 1.3em;
+    font-weight: bold;
+    margin-bottom: 40px;
+    color: rgb(11, 179, 75);
+}
+
+/* TASK SMALL */
+
+.task-small {
+    background: rgb(255, 236, 201);
+    display: flex;
+    border: 1px solid rgba(0,0,0,0.1);
+    border-radius: 5px;
+    margin: 10px 0;
+    cursor: pointer;
+    transition: all 0.3s;
+    flex: 0.7;
+}
+
+.task-small:hover {
+    background: rgb(255, 214, 139);
+}
+
+.task-small--done {
+    background: rgb(218, 255, 211);
+}
+
+.task-small--done:hover {
+    background: rgb(167, 255, 148);
+}
+
+.task-small__icon {
+    border-right: 1px solid rgba(0,0,0,0.2);
+    color: rgba(0,0,0,0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5em;
+    width: 30px;
+    padding: 12px;
+}
+
+.task-small__icon--done {
+    color: rgb(11, 179, 75);
+}
+
+.task-small__name {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 12px;
+}
+
+.task-small__coins {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    padding: 12px;
+    font-weight: bold;
+    margin-left: auto;
+    border-left: 1px solid rgba(0,0,0,0.2);
+}
+/* END OF TASK SMALL */
+
+/* SKILL */
+
+.skill {
+    flex-grow: 0.7;
+    background: rgba(0, 0, 0, 0.1);
+    display: flex;
+    border: 1px solid rgba(0,0,0,0.1);
+    border-radius: 5px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.skill:hover {
+    background: rgba(111,111,111,0.1);
+}
+
+.skill__description {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.skill__name {
+    align-items: center;
+    display: flex;
+    flex-basis: 15%;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #333;
+    padding: 15px;
+}
+
+.skill__progress-bar {
+    border: 1px solid rgba(0,0,0,0.1);
+    border-radius: 5px;
+    display: flex;
+    background: #fff;
+    width: 100%;
+    margin: 5px 0;
+    overflow: hidden;
+}
+
+.skill__progress-bar-fill {
+    background: rgb(11, 179, 75);
+    border-right: 1px solid rgba(0,0,0,0.1);
+    border-radius: 5px;
+    color: #eee;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+}
+
+.skill__lvl {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+}
+
+.skill-name {
+    color: #000;
+    font-weight: bold;
+}
+
+.lvl {
+    margin-left: 5px;
+    font-size: 1.2em;
+    line-height: 1.2em;
+    font-weight: bold;
+    color: rgb(11, 179, 75);
+}
+
+.exp {
+    color: rgb(32, 111, 202);
+}
+
+/* END SKILL */
+
+/* TASK */
+
+.task {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    align-items: stretch;
+    background: rgb(255, 236, 201);
+    border: 1px solid rgba(0,0,0,0.1);
+    border-radius: 5px;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: all 0.3s;
+    padding: 15px;
+}
+
+.task:hover {
+    background: rgb(255, 214, 139);
+}
+
+.task__icon {
+    flex-grow: 0.3;
+    /* border-right: 1px solid rgba(0,0,0,0.2); */
+    color: rgba(0,0,0,0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5em;
+    width: 10px;
+    padding-right: 15px;
+}
+
+.task:hover .task__icon .fas {
+    animation: iconhover 0.8s linear 0s infinite;
+}
+
+@keyframes iconhover {
+    0% {
+        transform: translateX(0px);
+    }
+    50% {
+        transform: translateX(5px);
+    }
+    100% {
+        transform: translateX(0px);
+    }
+}
+
+.task__name-container {
+    display: flex;
+    flex-grow: 0.1;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 10px;
+    font-weight: bold;
+}
+
+.task__name {
+    flex-grow: 1;
+}
+
+.task__description {
+    display: flex;
+    flex-grow: 0.6;
+    font-style: italic;
+    padding: 10px;
+    margin: 20px auto;
+}
+
+.task__rewards {
+    color: #aaa;
+    display: flex;
+    flex-grow: 0.2;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding: 10px;
+}
+
+/* END OF TASK */
+
+
+@media all and (max-width: 1400px) {
+    body {
+        font-size: 80%;
+    }
+}

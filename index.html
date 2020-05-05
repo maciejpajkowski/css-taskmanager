@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Task Manager 2018</title>
+    <link rel="stylesheet" href="css/fontawesome-all.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat|Roboto:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="app-container">
+        <nav class="nav">
+            <h1 class="nav__header"><i class="fas fa-tasks"></i> TM2018</h1>
+            <div class="nav__menu">
+                <input type="text" class="nav__search" placeholder="Search...">
+                <button class="nav__search-button"><i class="fas fa-search"></i>Search</button>
+                <div class="nav__option"><i class="far fa-question-circle"></i>Help</div>
+                <div class="nav__option"><i class="far fa-edit"></i>Settings</div>
+                <div class="nav__option nav__option--profile">
+                    <div class="nav__avatar"></div>
+                    <div class="nav__profile-name">My Profile</div>
+                </div>
+            </div>
+        </nav>
+        <main class="app">
+            <div class="menu">
+                <div class="menu__option-container">
+                    <div class="menu__option menu__option--header">MAIN</div>
+                    <ul class="menu__option-list-container">
+                        <li class="menu__option">
+                            <i class="fas fa-home"></i>
+                            <span class="menu__option-hover">Home</span>
+                        </li>
+                        <li class="menu__option">
+                            <i class="fas fa-chart-line"></i>
+                            <span class="menu__option-hover">Statistics</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="menu__option-container">
+                    <div class="menu__option menu__option--header">TASKS</div>
+                    <ul class="menu__option-list-container">
+                        <li class="menu__option">
+                            <i class="fas fa-plus"></i>
+                            <span class="menu__option-hover">Create a new task</span>
+                        </li>
+                        <li class="menu__option">
+                            <i class="fas fa-edit"></i>
+                            <span class="menu__option-hover">View and edit tasks</span>
+                        </li>
+                        <li class="menu__option">
+                            <i class="fas fa-certificate"></i>
+                            <span class="menu__option-hover">Missions</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="menu__option-container">
+                    <div class="menu__option menu__option--header">ADMINISTRATION</div>
+                    <ul class="menu__option-list-container">
+                        <li class="menu__option">
+                            <i class="fas fa-desktop"></i>
+                            <span class="menu__option-hover">Admin settings</span>
+                        </li>
+                        <li class="menu__option">
+                            <i class="fas fa-address-book"></i>
+                            <span class="menu__option-hover">Users</span>
+                        </li>
+                        <li class="menu__option">
+                            <i class="fas fa-paint-brush"></i>
+                            <span class="menu__option-hover">Appearance</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="menu__option-container">
+                    <div class="menu__option menu__option--header">OTHER</div>
+                    <ul class="menu__option-list-container">
+                        <li class="menu__option">
+                            <i class="fas fa-plug"></i>
+                            <span class="menu__option-hover">Plugins</span>
+                        </li>
+                        <li class="menu__option">
+                            <i class="fas fa-chart-bar"></i>
+                            <span class="menu__option-hover">Database settings</span>
+                        </li>
+                        <li class="menu__option">
+                            <i class="fas fa-wrench"></i>
+                            <span class="menu__option-hover">Tools</span>
+                        </li>
+                    </ul>
+                </div>
+                <p class="menu__copyright">Copyright © MP</p>
+            </div>
+            <div class="content">
+                <section class="main-panel">
+                    <div class="main-panel__row main-panel__row--first">
+                        <div class="main-panel__panel main-panel__panel--overview">
+                            <h2 class="main-panel__header">Overview</h2>
+                            <!-- <hr> -->
+                            <p class="main-panel__curr-status">You have completed <span class="main-panel__curr-status--num">115</span> tasks this week and received <span class="main-panel__curr-status--num">842</span> EXP!</p>
+                            <h3 class="main-panel__header main-panel__header--subheader">Most profitable task this week:</h3>
+                            <div class="task-small task-small--done">
+                                <div class="task-small__icon task-small__icon--done">
+                                    <i class="fas fa-check"></i>
+                                </div>
+                                <div class="task-small__name">
+                                    Deploy the first React Application
+                                </div>
+                                <div class="task-small__coins">423xp</div>
+                            </div>
+                            <h3 class="main-panel__header main-panel__header--subheader">Most difficult task this week:</h3>
+                            <div class="task-small">
+                                <div class="task-small__icon">
+                                    <i class="fas fa-arrow-alt-circle-right"></i>
+                                </div>
+                                <div class="task-small__name">
+                                    40 course videos done
+                                </div>
+                                <div class="task-small__coins">268xp</div>
+                            </div>
+                        </div>
+                        <div class="main-panel__panel main-panel__panel--progress">
+                            <h2 class="main-panel__header">Progress</h2>
+                            <!-- <hr> -->
+                            <h3 class="main-panel__totallvl">Total Level: <span class="lvl">6</span></h3>
+                            <h4 class="main-panel__totalexp">Experience: <span class="exp">2431</span></h4>
+                            <p class="main-panel__curr-status">You recently made the most progress with the following skills:</p>
+                            <div class="skill">
+                                <div class="skill__description">
+                                    <div class="skill__name">React</div>
+                                    <div class="skill__progress-bar">
+                                        <div class="skill__progress-bar-fill">400/2000</div>
+                                    </div>
+                                    <div class="skill__lvl">LVL: <span class="lvl">3</span></div>
+                                </div>
+                            </div>
+                            <div class="skill">
+                                <div class="skill__description">
+                                    <div class="skill__name">JavaScript</div>
+                                    <div class="skill__progress-bar">
+                                        <div class="skill__progress-bar-fill">400/2000</div>
+                                    </div>
+                                    <div class="skill__lvl">LVL: <span class="lvl">4</span></div>
+                                </div>  
+                            </div>
+                            <div class="skill">
+                                <div class="skill__description">
+                                    <div class="skill__name">CSS</div>
+                                    <div class="skill__progress-bar">
+                                        <div class="skill__progress-bar-fill">400/2000</div>
+                                    </div>
+                                    <div class="skill__lvl">LVL: <span class="lvl">6</span></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="main-panel__row main-panel__row--last">
+                        <div class="main-panel__panel main-panel__panel--stats">
+                            <h2 class="main-panel__header">Quick stats</h2>
+                            <div class="main-panel__stats-container">
+                                <canvas id="myChart" width="400" height="300"></canvas>
+                            </div>
+                        </div>
+                        <div class="main-panel__panel main-panel__panel--totd">
+                            <h2 class="main-panel__header">Task of the Day</h2>
+                            <!-- <hr> -->
+                            <div class="task">
+                                <div class="task__name-container">
+                                    <div class="task__icon">
+                                        <i class="fas fa-arrow-alt-circle-right"></i>
+                                    </div>
+                                    <div class="task__name">Build a React app in a day</div>
+                                </div>
+                                <div class="task__description">Create a new React app from scratch. It does not have to be complicated, just make sure that it works. </div>
+                                <div class="task__rewards">
+                                    <div class="exp">+200xp</div>
+                                    <div class="exp"><span class="skill-name"> React: </span>+700xp</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </main>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.min.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
